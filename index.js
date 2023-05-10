@@ -7,7 +7,7 @@ const riddles =require('./routes/riddles')
 const poetry =require('./routes/poetry')
 const songs =require('./routes/songs')
 const proverbs =require('./routes/proverbs')
-
+const Search =require('./routes/Search')
 
 const app=express();
 require('dotenv').config()
@@ -31,6 +31,7 @@ app.use('/api/v1/riddles', riddles);
 app.use('/api/v1/poetry', poetry);
 app.use('/api/v1/songs', songs);
 app.use('/api/v1/proverbs', proverbs);
+app.use('/api/v1/Search', Search);
 app.use(notFound)
 
 
